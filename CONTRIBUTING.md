@@ -25,8 +25,8 @@ Here you can find the guidelines for contributing to the extension. We welcome a
 Start by cloning the repository or its fork, installing the dependencies, and configuring the extension:
 
 ```bash
-git clone https://github.com/datisthq/cardealerdp.git
-cd cardealerdp
+git clone https://github.com/datisthq/extensiondp.git
+cd extensiondp
 pnpm install
 pnpm configure
 ```

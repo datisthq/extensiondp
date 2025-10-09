@@ -1,0 +1,4 @@
+dangerouslyAllowAllBuilds: true
+packages:
+  - extension
+  - sdk-ts

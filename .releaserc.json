@@ -1,0 +1,43 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    ["@semantic-release/commit-analyzer", { "preset": "conventionalcommits" }],
+    [
+      "@semantic-release/release-notes-generator",
+      { "preset": "conventionalcommits" }
+    ],
+    [
+      "@semantic-release/exec",
+      { "prepareCmd": "pnpm /version/ ${nextRelease.version}" }
+    ],
+    ["@semantic-release/exec", { "prepareCmd": "pnpm generate" }],
+    [
+      "@semantic-release/git",
+      {
+        "message": "release: v${nextRelease.version}",
+        "assets": [
+          "extension/package.json",
+          "extension/profile.json",
+          "extension/schemas/*.json",
+          "extension/content/docs/specification/metadata.md",
+          "extension/content/docs/specification/data/*.md",
+          "sdk-py/pyproject.toml",
+          "sdk-py/*/profile.py",
+          "sdk-py/*/schemas/*.py",
+          "sdk-ts/package.json",
+          "sdk-ts/profile.ts",
+          "sdk-ts/schemas/*.ts",
+          "package.json"
+        ]
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "pnpm /build/",
+        "publishCmd": "pnpm /publish/"
+      }
+    ],
+    ["@semantic-release/github"]
+  ]
+}

@@ -4,43 +4,38 @@ sidebar:
   order: 1
 ---
 
-Cardealer DP (Car Dealer Data Package) is a data exchange format that helps car dealerships share their car listings. It is developed on top of the Data Package standard.
+Extension DP (Data Package Extension Template) is a data exchange format that helps `PLACEHOLDER` share their `PLACEHOLDER`. It is developed on top of the Data Package standard.
 
-## Why Cardealer DP?
+## Why Extension DP?
 
-The automotive industry lacks a standardized format for exchanging car listing data between dealerships, marketplaces, and aggregation platforms. This creates several challenges:
+The `PLACEHOLDER` lacks a standardized format for exchanging car listing data between marketplaces, and aggregation platforms. This creates several challenges:
 
 - **Data inconsistency**: Each platform uses its own proprietary format, making integration difficult
-- **Manual data entry**: Dealerships often need to manually enter the same car listings across multiple platforms
+- **Manual data entry**: Often needed to manually enter the same data across multiple platforms
 - **Limited interoperability**: Aggregators must maintain custom integrations for each data source
 - **Data quality issues**: Without clear schemas, data validation and quality control are challenging
 
-Cardealer DP solves these problems by providing a **standardized, validated, and extensible format** for sharing car dealership data. Built on the proven [Data Package](https://datapackage.org/) standard, it ensures data is machine-readable, well-documented, and easy to integrate.
+Extension DP solves these problems by providing a **standardized, validated, and extensible format** for sharing data. Built on the proven [Data Package](https://datapackage.org/) standard, it ensures data is machine-readable, well-documented, and easy to integrate.
 
-## Structure of a Cardealer DP File
+## Structure of a Extension DP
 
-A Cardealer DP file is a JSON document that follows the Data Package specification. The file contains metadata about the package and one or more data resources describing the dealer, its showrooms, and its cars.
+A Extension DP is a [Data Package](https://datapackage.org/) that follows the Data Package specification. The file contains metadata about the package and one or more data resources:
 
 ### Basic Structure
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/<version>/extension/profile.json",
+  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/profile.json",
   "resources": [
     {
-      "name": "car",
-      "schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/<version>/extension/schemas/car.json",
+      "name": "table1",
+      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/schemas/table1.json",
       "data": [{...}, {...}, {...}]
     },
     {
-      "name": "dealer",
-      "schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/<version>/extension/schemas/dealer.json",
+      "name": "table2",
+      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/schemas/table2.json",
       "data": [{...}]
-    },
-    {
-      "name": "showroom",
-      "schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/<version>/extension/schemas/showroom.json",
-      "data": [{...}, {...}]
     }
   ]
 }
@@ -48,22 +43,15 @@ A Cardealer DP file is a JSON document that follows the Data Package specificati
 
 ### Key Components
 
-1. **Profile**: References the Cardealer DP profile that defines the structure and validation rules
-2. **Resources**: An array containing 1-3 resources:
-   - **dealer** (required): Information about the car dealership (exactly 1 item)
-   - **car** (optional): Array of car listings offered by the dealer
-   - **showroom** (optional): Array of physical showroom locations
+1. **Profile**: References the Extension DP profile that defines the structure and validation rules
+2. **Resources**: An array containing resources:
+   - **table1**: First table
+   - **table2**: Second table (and so on)
 
 Each resource includes:
-- **name**: The resource type identifier (`"dealer"`, `"car"`, or `"showroom"`)
+- **name**: The resource type identifier
 - **schema**: URL pointing to the JSON schema that validates the data structure
-- **data**: An array of data items conforming to the schema
 
 ### Data Relationships
 
-The resources are connected through foreign keys:
-- Cars can reference a specific **showroom** via `showroomId`
-- If no `showroomId` is provided, the car is assumed to be at the dealer's main address
-- Each showroom belongs to a dealer
-
-This structure allows flexible representation of dealerships with single or multiple locations while maintaining data integrity through schema validation.
+The resources might be connected through foreign keys. The relationships are defined in the data table schemas.

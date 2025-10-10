@@ -8,9 +8,8 @@ Extension DP provides SDKs for Python and TypeScript/JavaScript to make it easy 
 
 ## Python
 
-:::note
-In addition to the Python SDK, we recommend using [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
-:::
+> [!NOTE]
+> In addition to the Python SDK, we recommend using [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 
 ### Installation
 
@@ -89,9 +88,8 @@ print(package)
 
 ## TypeScript
 
-:::note
-In addition to the TypeScript SDK, we recommend using [dpkit](https://dpkit.dev/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
-:::
+> [!NOTE]
+> In addition to the TypeScript SDK, we recommend using [dpkit](https://dpkit.dev/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 
 ### Installation
 
@@ -172,9 +170,8 @@ console.log(dataPackage);
 
 ## Command-Line
 
-:::note
+> [!NOTE]
 As an alternative to [dpkit](https://dpkit.dev/), you can use [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages in Command-Line.
-:::
 
 ### Installation
 

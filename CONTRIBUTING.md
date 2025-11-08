@@ -14,12 +14,12 @@ Here you can find the guidelines for contributing to the extension. We welcome a
 - **Releasing**:
   - Configured a pending trusted publisher on [PyPI](https://pypi.org/manage/account/publishing/) matching the extension name (slug)
   - Created an access token on [NPM](https://www.npmjs.com/settings/roll/tokens), added to [Github](https://github.com/datisthq/extensiondp/settings/secrets/actions) as a repository secret `NPM_TOKEN`
-  - Updated the publishing source on [GitHub](https://github.com/datisthq/extensiondp/settings/pages) to `Github Actions`.
+  - In case you use it on GitHub, updated the publishing source in [the settings](https://github.com/datisthq/extensiondp/settings/pages) to `Github Actions`.
 
 ## Development
 
 > [!NOTE]
-> If you not familiar with the GitHub workflow, we recommend reading of how to [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and how to [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+> If you not familiar with the Git workflow, we recommend reading of how to [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and how to [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Getting Started
 
@@ -70,4 +70,4 @@ git commit -am "My changes"
 After your pull request is ready to be merged, you can release a new version of the extension by merging the pull request into the `main` branch:
 
 1. Squash and merge the PR using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary).
-2. Github Actions will automatically create a new release, publish the extension to PyPI and NPM, and publish the documentation to GitHub Pages.
+2. In case you use it on GitHub, Github Actions will automatically create a new release, publish the extension to PyPI and NPM, and publish the documentation to GitHub Pages.

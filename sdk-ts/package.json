@@ -4,7 +4,7 @@
   "version": "0.1.5",
   "slug": "extensiondp",
   "title": "Extension DP",
-  "description": "Extension DP (Data Package Extension Template) is a GitHub repository template for rapid Data Package extension development",
+  "description": "Extension DP (Data Package Extension Template) is a Git repository template for rapid Data Package extension development",
   "repository": "https://github.com/datisthq/extensiondp",
   "homepage": "https://datisthq.github.io/extensiondp",
   "author": "Evgeny Karev",

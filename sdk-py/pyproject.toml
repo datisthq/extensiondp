@@ -1,22 +1,26 @@
 [project]
 name = "extensiondp"
 version = "0.1.5"
-slug = "extensiondp"
-title = "Extension DP"
-description = "Extension DP (Data Package Extension Template) is a GitHub repository template for rapid Data Package extension development"
-license = "MIT"
+description = "Extension DP (Data Package Extension Template) is a Git repository template for rapid Data Package extension development"
 readme = "README.md"
 requires-python = ">=3.12"
-classifiers = [ "Programming Language :: Python :: 3", "Programming Language :: Python :: 3.12", "Topic :: Software Development :: Libraries :: Python Modules" ]
-dependencies = [ "typing-extensions>=4.15" ]
-
-[project.urls]
-repository = "https://github.com/datisthq/extensiondp"
-homepage = "https://datisthq.github.io/extensiondp"
+license = "MIT"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = ["typing-extensions>=4.15"]
+slug = "extensiondp"
+title = "Extension DP"
 
 [[project.authors]]
 name = "Evgeny Karev"
 
+[project.urls]
+homepage = "https://datisthq.github.io/extensiondp"
+repository = "https://github.com/datisthq/extensiondp"
+
 [build-system]
-requires = [ "hatchling" ]
+requires = ["hatchling"]
 build-backend = "hatchling.build"

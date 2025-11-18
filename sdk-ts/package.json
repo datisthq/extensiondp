@@ -1,7 +1,7 @@
 {
   "name": "extensiondp",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "slug": "extensiondp",
   "title": "Extension DP",
   "description": "Extension DP (Data Package Extension Template) is a Git repository template for rapid Data Package extension development",
